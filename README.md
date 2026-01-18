@@ -1,16 +1,40 @@
-# qt_test_aristide
+# 📧 View Email Prototype — Flutter + Protocol Buffers
 
-A new Flutter project.
+A Flutter application that loads and displays a locally stored email message encoded in **Protocol Buffer format**, verifies its integrity using **SHA-256 hashing**, and presents a modern animated UI with dark/light theme support.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Project Overview
 
-A few resources to get you started if this is your first Flutter project:
+This project demonstrates:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Local file loading (`sample_email.pb`)
+- Protocol Buffers decoding
+- SHA-256 integrity verification
+- State management with Riverpod
+- Error handling for malformed `.pb` files
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app loads an email message at startup, verifies the email body and attached image using cryptographic hashes, and displays verification status to the user.
+
+---
+
+## 🧱 Architecture
+
+The project follows **Clean Architecture** principles:
+
+lib/
+├── core/
+│    ├── errors/
+│    ├──Theme/
+     └── utils/
+├── data/
+│    ├── datasources/
+│    ├── models/proto/
+│    └── repositories/
+├── domain/
+│    ├── entities/
+│    ├──Repositories
+└── presentation/
+    ├── providers/
+    ├── screens/
+    └── widgets/
