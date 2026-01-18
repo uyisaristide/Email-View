@@ -96,7 +96,7 @@ Created a script  to generate the sample_email.pb file.
 scripts/generate_sample_email.dart
 
 
-And runed:
+**By running a command:**
 
 dart run scripts/generate_sample_email.dart
 
